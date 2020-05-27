@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
 
 <head>
-    <title>Hello AngluarJS 2009</title>
+    <title>Hello AngluarJS member</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
 
-<h1>Hello, student</h1>
-<p>This is the test demo on AngularJS</p>
+<h1>Hello, This project will show you the structure of using AngularJS(2009) version1</h1>
+<p>This is project applied MVVM ( as known as Model View View Model design pattern of UIs)
+
+    and the question is why you are applied this pattern? High cohension and low coupling.
+    All the project, they are getting complicated, complex by itself when they are grown up. 
+    So we need structure that can connect relatives functions, and low coupling means when you edit this function and another function doesnt get effective. 
+</p>
+<div ng-controller ="myFirstController">
+
+    {{name}}
+</div>
 </body>
 </html>
