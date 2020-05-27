@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html ng-app="myFirstApp">
+<html >
 
 <head>
     <title>Hello AngluarJS member</title>
-    <script src="angular.min.js"></script>
+    <meta charset="utf-8">
+    <script  src="angular.min.js"></script>
     <script src="app.js"></script>
 </head>
-<body>
+<body ng-app="myApp">
 
 <h1>Hello, This project will show you the structure of using AngularJS(2009) version1</h1>
 <p>This is project applied MVVM ( as known as Model View View Model design pattern of UIs)
@@ -15,7 +16,7 @@
     All the project, they are getting complicated, complex by itself when they are grown up. 
     So we need structure that can connect relatives functions, and low coupling means when you edit this function and another function doesnt get effective. 
 </p>
-<div ng-controller ="myFirstController">
+<div ng-controller ="myCtrl">
 
     {{name}}
 </div>
