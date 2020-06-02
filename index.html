@@ -6,19 +6,55 @@
     <meta charset="utf-8">
     <script  src="angular.min.js"></script>
     <script src="app.js"></script>
+    <style>
+        p{
+            width: 500px;
+        }
+    </style>
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" >
 
 <h1>Hello, This project will show you the structure of using AngularJS(2009) version1</h1>
-<p>This is project applied MVVM ( as known as Model View View Model design pattern of UIs)
+<p style="width: 500px;"><ul>
+    <li>  This is project applied MVVM ( as known as Model View View Model design pattern of UIs)</li>
+    <li> and the question is why you are applied this pattern? High cohension and low coupling.</li>
+    <li>All the project, they are getting complicated, complex by itself when they are grown up. </li>
+    <li>So we need structure that can connect relatives functions, and low coupling means when you edit this function and another function doesnt get effective. </li>
+</ul>
+  
 
-    and the question is why you are applied this pattern? High cohension and low coupling.
-    All the project, they are getting complicated, complex by itself when they are grown up. 
-    So we need structure that can connect relatives functions, and low coupling means when you edit this function and another function doesnt get effective. 
 </p>
 <div ng-controller ="myCtrl">
+ 
+    <h1>Sync: {{name}}</h1>
+    {{hello()}}
 
-    {{name}}
+    <input type="text" ng-model="name" ng-keyup="calNum();">
+
+    <h1>Binding with keyUp</h1>
+    <p>String into numeric {{totalNum}}</p>
 </div>
+<div ng-controller="secApp" id="mn-data" greeting ="Cool">
+    <h3>{{name}} </h3> {{arr.fname}} {{arr.lname }}
+
+    <table>
+        
+        <tr ng-repeat = "sub in arr.subjects">
+            
+            <td> {{ sub.name}}</td>
+             
+            <td> {{ sub.marks}}</td>
+        </tr>
+
+    </table>
+    {{ arr.fc(); }}
+</div>
+<script>
+    // var ele = document.getElementById('mn-data');
+    // console.log(ele);
+    // console.log(ele.getAttribute('ng-controller'));
+   var ele = document.querySelector('[ng-controller]');
+   console.log( ele.getAttribute('ng-controller'));
+</script>
 </body>
 </html>
